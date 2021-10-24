@@ -4,5 +4,5 @@ var calc = function() {
     let sum = split[0]+split[1]+split[2];
     return console.log(sum);
  };
-calc();
+
  module.exports = calc;
