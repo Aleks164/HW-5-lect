@@ -1,12 +1,13 @@
-var calc = function() {
-    let prom = prompt("Enter a digit from 1 to 12", "1");
-    if (prom < 13 && prom >0) {
-    let prom_1 = prom-1;
-    var date = new Date(2011, prom_1, 1);
-    var month1 = date.toLocaleString('default', { month: 'short' })
-    return console.log(month1);
-    }
-    else return alert("You entered incorrect data")
-    }
-
- module.exports = calc;
+export function calc() {
+  let date = window.prompt("Pelease input date format with dd.mm.yyyy in the input field",
+  "28.10.2021");
+  let [day, month, year] = date.split(".");
+  let newDate = new Date(year, month-1, day);
+  var dayOfWeek = newDate.toLocaleString('default', { weekday: 'long' });
+  if(dayOfWeek!=="Invalid Date"){
+    window.alert(`${day}.${month}.${year} это ${dayOfWeek}`);
+  }
+  else {
+    window.alert("Invalid date type");
+  }
+}

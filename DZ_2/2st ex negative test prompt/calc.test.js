@@ -1,8 +1,21 @@
-const calc = require('./calc');
+import { calc } from "./calc";
 
-
-it("if entered '1' then 'январь'", () => {
-  jest.spyOn(calc(), "prompt").returnValue("1");
-  expect(calc()).toHaveBeenCalledWith("январь");
+it("returns 28.10.2021 это четверг", () => {
+  jest.spyOn(window, "prompt").mockReturnValue("28.10.2021");
+  window.alert = jest.fn();
+  calc();
+  expect(window.alert).toHaveBeenCalledWith("28.10.2021 это четверг");
+});
+it("returns 28.10.2022 это пятница", () => {
+  jest.spyOn(window, "prompt").mockReturnValue("28.10.2022");
+  window.alert = jest.fn();
+  calc();
+  expect(window.alert).toHaveBeenCalledWith("28.10.2022 это пятница");
+});
+it("returns 123 это пятница", () => {
+  jest.spyOn(window, "prompt").mockReturnValue("123");
+  window.alert = jest.fn();
+  calc();
+  expect(window.alert).toHaveBeenCalledWith("Invalid date type");
 });
 
