@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Aleks164/HW-5-lect#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1"
   }
 }
