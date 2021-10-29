@@ -1,13 +1,12 @@
-let isWord = function(string) {
-    if ((typeof string)=="string"){
-    let checkString = string.split(" ");
-    if(checkString.length==1){
-        return true;
+const isWord = function (string) {
+  if ((typeof string) === 'string') {
+    const checkString = string.split(' ');
+    if (checkString.length == 1) {
+      return true;
     }
-    else return false;
-    }
-    else return false;
+    return false;
   }
- 
+  return false;
+};
 
- module.exports = isWord;
+module.exports = isWord;

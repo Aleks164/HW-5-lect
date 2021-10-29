@@ -1,5 +1,5 @@
-let pow = function(a, x) {
-    let aPowx = a**x;
-    return aPowx;
-    }
- module.exports = pow;
+const pow = function (a, x) {
+  const aPowx = a ** x;
+  return aPowx;
+};
+module.exports = pow;

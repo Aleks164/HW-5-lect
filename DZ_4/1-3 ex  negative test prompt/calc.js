@@ -1,12 +1,12 @@
-let user = {
-    name: "Jonn"
+const user = {
+  name: 'Jonn',
 };
 function assignObj() {
-    let input = prompt("Enter a digit", "15");
-    user["age"] = input;
-    let admin = Object.assign({}, user, {role: 'admin'});
-    let {name, age, role} = admin;
-    return console.log(name, age, role);
-};
+  const input = prompt('Enter a digit', '15');
+  user.age = input;
+  const admin = { ...user, role: 'admin' };
+  const { name, age, role } = admin;
+  return console.log(name, age, role);
+}
 
- module.exports = calc;
+module.exports = calc;

@@ -1,6 +1,6 @@
-var calc = function(aString, bString) {
-    let a = String(aString).length + String(bString).length;
-    console.log(a);    
- };
+const calc = function (aString, bString) {
+  const a = String(aString).length + String(bString).length;
+  console.log(a);
+};
 
- module.exports = calc;
+module.exports = calc;

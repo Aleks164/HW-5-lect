@@ -1,2 +1,1 @@
 const calc = require('./calc');
-
